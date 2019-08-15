@@ -1,7 +1,16 @@
 {
   "manifestVersion": "2.2",
-  "contracts": {},
+  "contracts": {
+    "Counter": "Counter"
+  },
   "dependencies": {},
   "name": "Truffle Guide",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "compiler": {
+    "manager": "openzeppelin",
+    "compilerSettings": {
+      "optimizer": {}
+    },
+    "solcVersion": "0.5.10"
+  }
 }

@@ -4,12 +4,14 @@
   "description": "",
   "main": "networks.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build && rm -rf .openzeppelin/.session && rm -rf .openzeppelin/dev*"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@openzeppelin/cli": "^2.5.2",
     "truffle": "^5.0.30"
   }
 }
