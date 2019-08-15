@@ -249,14 +249,6 @@ module.exports = async function(deployer) {
 
 You'll notice we used Truffle's default migration process instead of `sendTx` or `call`, like we would when interacting with OpenZeppelin's SDK on the command line. This is because the JavaScript API does not have those helper functions exported for the moment (a pending change), so we have to interact with contracts "the old way".
 
-## Tests
-
-Now let's write a test that makes sure our migrations finish with a counter at a value of 10. Create `test/countervalue.js`.
-
-```js
-
-```
-
 ## Caveats
 
 Once you start using Truffle in an OpenZeppelin SDK project, it's recommended you keep using it and don't mix and match other than in the context of migration scripts where you can use the OpenZeppelin SDK API as much as you wish. The reason is that OpenZeppelin will not respect the migrations deployed by Truffle as it is not aware of them, and will instead deploy its own copy of the contracts you're creating, possibly causing conflicts.
