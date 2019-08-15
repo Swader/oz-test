@@ -402,12 +402,12 @@
     "1565857539271": {
       "links": {},
       "events": {},
-      "address": "0x4219008EfDcf03f2F9A73Fb1a0997045aEB964a7",
-      "updated_at": 1565861083654
+      "address": "0xD1B2e2f82684d1cd7B0c911Ff2385a181eB82A9B",
+      "updated_at": 1565861738009
     }
   },
-  "schemaVersion": "3.0.1",
-  "updatedAt": "2019-08-04T15:46:22.680Z",
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-08-15T09:35:38.318Z",
   "devdoc": {
     "methods": {}
   },

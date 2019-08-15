@@ -1382,12 +1382,12 @@
     "1565857539271": {
       "events": {},
       "links": {},
-      "address": "0x31352ceCD7A88EA5b06a329126131fCb4634C689",
-      "transactionHash": "0x9f2f38cc6715c0b38d2e1f3c8679b2ff6d15a798f702fe3323de3b2713a2562f"
+      "address": "0x52659Cd5eD81Fb02402f16E7de1E0c8465EF93C7",
+      "transactionHash": "0x88747d941ee6cd02f5d415b674990455686461f09c138202741cc0687504da43"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-15T09:24:44.033Z",
+  "updatedAt": "2019-08-15T09:35:38.324Z",
   "devdoc": {
     "methods": {}
   },

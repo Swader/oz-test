@@ -1,14 +1,6 @@
-const { scripts, ConfigManager } = require('@openzeppelin/cli');
-const { add, push, create } = scripts;
+const Counter = artifacts.require("Counter");
 
-async function deploy(options) {
-  console.log(options);
-}
-
-module.exports = function(deployer, networkName, accounts) {
-    console.log(deployer);
-  deployer.then(async () => {
-    const { network, txParams } = await ConfigManager.initNetworkConfiguration({ network: networkName, from: accounts[0] })
-    await deploy({ network, txParams })
-  })
-}
+module.exports = async function(deployer) {
+    const counter = await Counter.deployed();
+    await counter.increase(10);
+};

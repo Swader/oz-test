@@ -239,23 +239,15 @@ Our counter is deployed but to make sure let's check if we can interact with it.
 Perfect. Now let's make the second migration which increases the counter value by 10. Create `migrations/3_increment.js`.
 
 ```js
-const { scripts, ConfigManager } = require('@openzeppelin/cli');
-const { sendTx } = scripts;
+const Counter = artifacts.require("Counter");
 
-async function deploy(options) {
-  // await sendTx(Object.assign({ contractAlias: 'Counter', methodName: 'increase', methodArgs: [10]}, options));
-  // DO increment
-}
-
-module.exports = function(deployer, networkName, accounts) {
-  deployer.then(async () => {
-    const { network, txParams } = await ConfigManager.initNetworkConfiguration({ network: networkName, from: accounts[0] })
-    await deploy({ network, txParams })
-  })
-}
+module.exports = async function(deployer) {
+    const counter = await Counter.deployed();
+    await counter.increase(10);
+};
 ```
 
-You'll notice we used `web3` instead of `sendTx` or `call`, like we would when interacting with OpenZeppelin's SDK on the command line. This is because the JavaScript API does not have those helper functions exported for the moment (a pending change), so we have to interact with contracts "the old way".
+You'll notice we used Truffle's default migration process instead of `sendTx` or `call`, like we would when interacting with OpenZeppelin's SDK on the command line. This is because the JavaScript API does not have those helper functions exported for the moment (a pending change), so we have to interact with contracts "the old way".
 
 ## Tests
 
